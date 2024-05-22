@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        moveUpDown: "moveUpDown 2s ease-in-out infinite", // Adjust duration and timing function as needed
+      },
     },
   },
   plugins: [],
