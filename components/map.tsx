@@ -5,12 +5,22 @@ import "leaflet/dist/leaflet.css";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import L from "leaflet";
+import { useEffect, useState } from "react";
 const icon = L.icon({ iconUrl: "/images/marker-icon.png" });
 
 const Map: React.FC = () => {
   // Koordinat dari Google Maps URL yang diberikan
   const position: [number, number] = [-6.2909745, 106.8046102];
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, []);
+
+  if (!isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="rounded-lg overflow-hidden mt-10">
