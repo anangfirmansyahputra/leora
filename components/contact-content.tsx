@@ -123,7 +123,7 @@ export default function ContactContent() {
             </Button>
           </div>
 
-          <Map />
+          {/* <Map /> */}
         </div>
       </div>
     </section>

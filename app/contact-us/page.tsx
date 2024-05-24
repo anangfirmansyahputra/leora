@@ -17,7 +17,7 @@ export default function ContactUsPage() {
         // description="Have questions or need information? Contact our team today and let's build meaningful connections together."
         description="Connect with Leora"
       />
-      {/* <ContactContent /> */}
+      <ContactContent />
     </div>
   );
 }
