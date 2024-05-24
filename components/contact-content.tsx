@@ -1,10 +1,12 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Instagram, Mail, Phone } from "lucide-react";
-import Map from "@/components/map";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+
+const Map = dynamic(() => import("@/components/map"), { ssr: false });
 
 export default function ContactContent() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -123,7 +125,7 @@ export default function ContactContent() {
             </Button>
           </div>
 
-          {/* <Map /> */}
+          <Map />
         </div>
       </div>
     </section>

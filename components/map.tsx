@@ -6,29 +6,27 @@ import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import L from "leaflet";
 import { useEffect, useState } from "react";
+
 const icon = L.icon({ iconUrl: "/images/marker-icon.png" });
 
 const Map: React.FC = () => {
-  // Koordinat dari Google Maps URL yang diberikan
   const position: [number, number] = [-6.2909745, 106.8046102];
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsClient(true);
   }, []);
 
-  if (!isLoading) {
-    return <div>Loading...</div>;
+  if (!isClient) {
+    return null;
   }
 
   return (
     <div className="rounded-lg overflow-hidden mt-10">
-      {/* @ts-ignore */}
       <MapContainer center={position} zoom={15} style={{ height: "400px" }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          // @ts-ignore
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         <Marker position={position} icon={icon}>
