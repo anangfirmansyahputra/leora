@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from "@/components/hero-page";
 import Map from "@/components/map";
 import { Button } from "@/components/ui/button";
@@ -5,6 +7,7 @@ import "leaflet/dist/leaflet.css";
 import { Instagram, Mail, Phone } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
   title: "Contact Us - Connect with Leora",
@@ -13,6 +16,16 @@ export const metadata: Metadata = {
 };
 
 export default function ContactUsPage() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  if (!isLoaded) {
+    return null;
+  }
+
   return (
     <main className="relative z-[1]">
       <Hero
