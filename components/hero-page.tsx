@@ -7,9 +7,10 @@ import AOS from "aos";
 type HeroProps = {
   title: string;
   img?: string;
+  description: string;
 };
 
-export default function Hero({ title, img }: HeroProps) {
+export default function Hero({ title, img, description }: HeroProps) {
   useEffect(() => {
     AOS.init({});
   }, []);
@@ -18,16 +19,27 @@ export default function Hero({ title, img }: HeroProps) {
     <div className="relative h-dvh pt-[80px] flex items-center">
       <Image
         fill
+        data-aos="fade-in"
         // src="/aerial-shot-city-skyline-orange-sky-sunset.jpg"
-        src={img ? img : "/hero.jpg"}
+        src={img ? img : "/aerial-shot-city-skyline-orange-sky-sunset.jpg"}
         alt="Hero"
         className="absolute object-cover object-top"
       />
       <div className="container relative mx-auto">
-        <div className="space-y-10 text-center">
-          <h1 className="text-6xl text-white font-bold" data-aos="fade-up">
+        <div className="space-y-7 text-center">
+          <h1
+            className="text-4xl sm:text-6xl text-white font-bold"
+            data-aos="fade-up"
+          >
             {title}
           </h1>
+          <p
+            className="text-[#efefef] text-sm md:text-2xl max-w-[800px] mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            {description}
+          </p>
         </div>
       </div>
     </div>

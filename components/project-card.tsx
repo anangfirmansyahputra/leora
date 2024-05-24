@@ -17,7 +17,7 @@ export default function ProjectCard({
 }: ProjectCard) {
   return (
     <div
-      className="cursor-pointer custom-border overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl group"
+      className="cursor-pointer custom-border overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl group bg-white z-[2]"
       data-aos="fade-up"
       data-aos-delay={`${(index + 1) * 100}`}
     >

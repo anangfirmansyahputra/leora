@@ -1,13 +1,45 @@
 import Hero from "@/components/hero-page";
+import Map from "@/components/map";
+import { Button } from "@/components/ui/button";
+import "leaflet/dist/leaflet.css";
+import { Instagram, Mail, Phone } from "lucide-react";
+import { Metadata } from "next";
+import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Contact Us - Connect with Leora",
+  description:
+    "Have questions or need information? Contact our team today and let's build meaningful connections together.",
+};
 
 export default function ContactUsPage() {
   return (
-    <>
-      <Hero title="Contact Us" />
-      <section className="py-20">
+    <main className="relative z-[1]">
+      <Hero
+        title="Contact Us"
+        // description="Have questions or need information? Contact our team today and let's build meaningful connections together."
+        description="Connect with Leora"
+      />
+      <section className="py-20 container relative">
+        <Image
+          src="/buildings_248101.svg"
+          alt=""
+          width={500}
+          height={500}
+          // data-aos="fade-in"
+          className="absolute top-0 md:top-[200px] left-[-300px] md:left-[-200px] xl:left-[-400px] rotate-[60deg]"
+        />
+        <Image
+          src="/buildings_248101.svg"
+          alt=""
+          width={500}
+          height={500}
+          // data-aos="fade-in"
+          className="absolute top-[500px] right-[-200px] md:right-[-300px] xl:right-[-400px] rotate-[120deg] scale-x-[-1] scale-y-[-1]"
+        />
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <div className="space-y-5 mb-10">
-            <h2 className="text-5xl font-semibold text-[#59b400] text-center">
+            <h2 className="text-3xl sm:text-5xl font-semibold text-[#59b400] text-center">
               Contact Us
             </h2>
             <p className="text-center text-[#989898] max-w-[600px] mx-auto">
@@ -30,7 +62,19 @@ export default function ContactUsPage() {
             </div>
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-900 ">
-                Subject
+                Name
+              </label>
+              <input
+                type="text"
+                id="subject"
+                className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
+                placeholder="Let us know how we can help you"
+                required
+              />
+            </div>
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-900 ">
+                Website
               </label>
               <input
                 type="text"
@@ -58,8 +102,33 @@ export default function ContactUsPage() {
               Send message
             </button>
           </form>
+          <div className="mt-20 space-y-10">
+            <h2 className="text-3xl sm:text-5xl font-semibold text-[#59b400] text-center">
+              Our Office
+            </h2>
+
+            <p className="text-center text-[#989898] max-w-[600px] mx-auto">
+              Harka Office, Alamanda Tower Lantai 2 Unit H 1, Jl. TB Simatupang
+              Nomor 23-24, Cilandak Bar., Kec. Cilandak, Kota Jakarta Selatan,
+              Daerah Khusus Ibukota Jakarta 12430
+            </p>
+
+            <div className="space-x-2 text-center space-y-5">
+              <Button size={"icon"}>
+                <Phone />
+              </Button>
+              <Button size={"icon"}>
+                <Instagram />
+              </Button>
+              <Button size={"icon"}>
+                <Mail />
+              </Button>
+            </div>
+
+            <Map />
+          </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
