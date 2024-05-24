@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 
 export default function ContactUsPage() {
   return (
-    <main className="relative z-[1]">
+    <div className="relative z-[1]">
       <Hero
         title="Contact Us"
         // description="Have questions or need information? Contact our team today and let's build meaningful connections together."
         description="Connect with Leora"
       />
       <ContactContent />
-    </main>
+    </div>
   );
 }
