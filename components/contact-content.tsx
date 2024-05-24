@@ -27,7 +27,7 @@ export default function ContactContent() {
         width={500}
         height={500}
         // data-aos="fade-in"
-        className="absolute top-0 md:top-[200px] left-[-300px] md:left-[-200px] xl:left-[-400px] rotate-[60deg]"
+        className="absolute z-[0] top-0 md:top-[200px] left-[-300px] md:left-[-200px] xl:left-[-400px] rotate-[60deg]"
       />
       <Image
         src="/buildings_248101.svg"
@@ -35,9 +35,9 @@ export default function ContactContent() {
         width={500}
         height={500}
         // data-aos="fade-in"
-        className="absolute top-[500px] right-[-200px] md:right-[-300px] xl:right-[-400px] rotate-[120deg] scale-x-[-1] scale-y-[-1]"
+        className="absolute z-[0] top-[500px] right-[-200px] md:right-[-300px] xl:right-[-400px] rotate-[120deg] scale-x-[-1] scale-y-[-1]"
       />
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md z-[2] relative">
         <div className="space-y-5 mb-10">
           <h2 className="text-3xl sm:text-5xl font-semibold text-[#59b400] text-center">
             Contact Us
