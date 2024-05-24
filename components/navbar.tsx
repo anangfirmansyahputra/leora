@@ -80,6 +80,7 @@ export default function Navbar() {
           height={100}
           alt="Logo"
           onClick={() => router.push("/")}
+          className="ml-[-25px]"
         />
         <nav className="md:block hidden">
           <ul className="flex items-center space-x-10">
@@ -98,7 +99,7 @@ export default function Navbar() {
             <Button
               size="icon"
               variant="secondary"
-              className="sm:hidden bg-transparent"
+              className="sm:hidden bg-transparent mr-[-10px]"
             >
               <Menu className="text-white" />
             </Button>
