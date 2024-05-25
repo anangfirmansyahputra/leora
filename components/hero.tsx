@@ -13,7 +13,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative h-[calc(100dvh+100px)] pt-[80px] flex items-center">
+    <div className="relative h-[calc(100dvh+100px)] flex items-center">
       <Image
         fill
         // src="/aerial-shot-city-skyline-orange-sky-sunset.jpg"
